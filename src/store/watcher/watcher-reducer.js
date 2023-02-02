@@ -1,4 +1,4 @@
-
+export const SET_WATCHERS = 'SET_WATCHERS'
 const initalState = {
     watchers: [],
     selectedWatcher: null
@@ -8,12 +8,8 @@ const initalState = {
 export function watcherReducer(state = initalState, action) {
 
     switch (action.type) {
-        // case 'SPEND_BALANCE':
-        //     const { loggedInUser } = state
-        //     return {
-        //         ...state,
-        //         loggedInUser: { ...loggedInUser, balance: loggedInUser.balance - action.amount }
-        //     }
+        case SET_WATCHERS:
+            return { ...state, watchers: action.watchers }
 
         default:
             return state
