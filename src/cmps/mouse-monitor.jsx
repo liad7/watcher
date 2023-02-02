@@ -22,7 +22,6 @@ export class MouseMonitor extends Component {
         this.removeMouseListener()
     }
 
-
     addMouseListener() {
         document.addEventListener('mousemove', this.updatePos)
     }
@@ -42,11 +41,12 @@ export class MouseMonitor extends Component {
 
     render() {
         const { pos, isOn } = this.state
+        console.log('pos:', pos);
         return (
             <section className="mouse-monitor">
                 <h3>Mouse Position</h3>
-                {/* <span>x: {pos.x},y: {pos.y}</span> */}
-                {!isOn && <span>x: {pos.x},y: {pos.y}</span>}
+                <span>x: {pos.x},y: {pos.y}</span>
+                {/* {!isOn && <span>x: {pos.x},y: {pos.y}</span>} */}
                 <button onClick={this.onToogle}>{isOn ? 'resume' : 'puase'}</button>
             </section>
         )

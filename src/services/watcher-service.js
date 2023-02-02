@@ -34,9 +34,9 @@ async function save(watcher) {
     }
 }
 
-function getEmptyWatcher() {
+function getEmptyWatcher(fullName = '') {
     return {
-        fullName: '',
+        fullName,
         movies: [],
     }
 }
@@ -55,7 +55,7 @@ function _createWatchers() {
 
 function _createWatcher(fullName = 'Puki Ba') {
     return {
-        id: utilService.makeId(),
+        _id: utilService.makeId(),
         fullName,
         movies: ['Rambo', 'Rocky']
     }

@@ -1,8 +1,11 @@
-export function WatcherPreview({ watcher }) {
+export function WatcherPreview({ watcher, onRemoveWatcher }) {
 
     return (
-        <section className="watcher-preview">
-            watcher
-        </section>
+        <article className="watcher-preview">
+            <h3>{watcher.fullName}</h3>
+            <hr />
+            <button onClick={() => onRemoveWatcher(watcher._id)}>✖️</button>
+            {/* // <button onClick={() => onSelectWatcher(id)}>Select</button> */}
+        </article>
     )
 }
