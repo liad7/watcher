@@ -7,12 +7,10 @@ import { SeasonClock } from './cmps/season-clock'
 function App() {
   return (
     <main>
-      <AnimalList />
-      {/* <SeasonClock /> */}
-      <CountDown startFrom={10} onDone={() => {
-        console.log('Done!')
-      }} />
-      <MouseMonitor />
+      {/* <AnimalList />
+      <SeasonClock />
+      <CountDown startFrom={10} onDone={() => console.log('Done!')} />
+      <MouseMonitor /> */}
     </main>
   )
 }
