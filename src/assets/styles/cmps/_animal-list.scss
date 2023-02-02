@@ -1,0 +1,18 @@
+.animal-list {
+    background-color: rgb(176, 0, 0);
+    color: white;
+    text-align: center;
+
+    table {
+        margin: auto;
+        border: black solid 1px;
+        border-collapse: collapse;
+
+        td{
+            border: black solid 1px;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+        }
+    }
+}

@@ -1,11 +1,11 @@
-import logo from './logo.svg'
 import './App.css'
+import { AnimalList } from './cmps/aminal-list'
 
 function App() {
   return (
-    <section>
-      
-    </section>
+    <main>
+      <AnimalList />
+    </main>
   )
 }
 
