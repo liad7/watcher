@@ -5,7 +5,7 @@ export function AnimalPreview({animal}) {
         <tr>
             <td>{animal.type}</td>
             <td>{animal.count}</td>
-            <td><a href="#">Search</a></td>
+            <td><a target="_blank" href={`https://www.google.com/search?q=${animal.type}`}>search</a></td>
         </tr>
     )
 }
