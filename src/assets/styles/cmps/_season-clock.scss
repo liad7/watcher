@@ -1,0 +1,18 @@
+.season-clock{
+    margin: 10px auto;
+    width: fit-content;
+    text-align: center;
+    color: black;
+    background-color: aqua;
+    padding: 10px 20px;
+
+    &.dark{
+        color: white;
+        background-color: blue;
+    }
+
+    .clock{
+        margin: 10px;
+        font-size: 1.5em;
+    }
+}
