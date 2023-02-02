@@ -37,6 +37,7 @@ class _WatcherIndex extends Component {
 
         return (
             <section className="watcher-index">
+                <h2>Watcher app</h2>
                 <button onClick={this.onAddWatcher}>Add watcher</button>
                 <WatcherList watchers={watchers} onRemoveWatcher={this.onRemoveWatcher} />
             </section>

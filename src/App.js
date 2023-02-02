@@ -10,18 +10,20 @@ import { WatcherIndex } from './views/watcher-index'
 function App() {
   return (
     <Router>
+      <div className="app">
 
-      <main>
-        <Switch>
-          <Route path="/animal" component={AnimalList} />
-          <Route path="/clock" component={SeasonClock} />
-          {/* <Route path="/count" component={CountDown} /> */}
-          {/* <CountDown startFrom={10} onDone={() => console.log('Done!')} /> */}
-          <Route path="/mouse" component={MouseMonitor} />
-          <Route path="/watcher/:id" component={WatcherDetails} />
-          <Route path="/watcher" component={WatcherIndex} />
-        </Switch>
-      </main>
+        <main>
+          <Switch>
+            <Route path="/animal" component={AnimalList} />
+            <Route path="/clock" component={SeasonClock} />
+            {/* <Route path="/count" component={CountDown} /> */}
+            {/* <CountDown startFrom={10} onDone={() => console.log('Done!')} /> */}
+            <Route path="/mouse" component={MouseMonitor} />
+            <Route path="/watcher/:id" component={WatcherDetails} />
+            <Route path="/watcher" component={WatcherIndex} />
+          </Switch>
+        </main>
+      </div>
     </Router>
   )
 }

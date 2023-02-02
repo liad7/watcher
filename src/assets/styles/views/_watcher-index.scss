@@ -1,0 +1,11 @@
+.watcher-index {
+    .watcher-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        .watcher-preview{
+            padding: 10px;
+            margin: 0 10px;
+        }
+    }
+}
