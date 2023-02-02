@@ -24,7 +24,14 @@ class _WatcherDetails extends Component {
         if (!watcher) return <section>Loading...</section>
         return (
             <section className="watcher-details">
-                {watcher.fullName}
+                <h3>{watcher.fullName}</h3>
+                <h5>Movies</h5>
+                {!!watcher.movies.length ?
+                    <ul>{watcher.movies.map((movie, idx) => <li key={idx}>{movie}</li>)}</ul>
+                    :
+                    <p>No movies to display</p>
+                }
+                <hr />
                 <Link to="/watcher">Back</Link>
             </section>
         )
