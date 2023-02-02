@@ -1,0 +1,13 @@
+.count-down {
+    background-color: rgb(77, 236, 236);
+    border: double red 5px;
+    width: 100px;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+
+    &.last {
+        color: red;
+    }
+
+}
