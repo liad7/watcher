@@ -46,14 +46,12 @@ class _WatcherIndex extends Component {
 
 const mapStateToProps = storeState => ({
     watchers: storeState.watcherModule.watchers,
-
 })
 
 const mapDispatchToProps = {
     loadWatchers,
     removeWatcher,
     saveWatcher,
-    selectWatcher,
 }
 
 export const WatcherIndex = connect(mapStateToProps, mapDispatchToProps)(_WatcherIndex)

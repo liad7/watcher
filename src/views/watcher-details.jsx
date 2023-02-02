@@ -1,3 +1,6 @@
+import { Component } from "react"
+import { connect } from "react-redux"
+import { Link } from "react-router-dom"
 import { watcherService } from "../services/watcher-service"
 
 class _WatcherDetails extends Component {
@@ -17,19 +20,15 @@ class _WatcherDetails extends Component {
     }
 
     render() {
+        const { watcher } = this.state
+        if (!watcher) return <section>Loading...</section>
         return (
             <section className="watcher-details">
+                {watcher.fullName}
+                <Link to="/watcher">Back</Link>
             </section>
         )
     }
 }
 
-const mapStateToProps = storeState => ({
-    selectedWatcher: storeState.watcherModule.selectedWatcher,
-})
-
-const mapDispatchToProps = {
-    selectWatcher,
-}
-
-export const WatcherDetails = connect(mapStateToProps, mapDispatchToProps)(_WatcherDetails)
+export const WatcherDetails = connect()(_WatcherDetails)

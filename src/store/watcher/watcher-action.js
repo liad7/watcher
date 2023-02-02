@@ -1,5 +1,5 @@
 import { watcherService } from "../../services/watcher-service"
-import { ADD_WATCHER, REMOVE_WATCHER, SET_SELECTED_WATCHER, SET_WATCHERS, UPDATE_WATCHER } from "./watcher-reducer"
+import { ADD_WATCHER, REMOVE_WATCHER, SET_WATCHERS, UPDATE_WATCHER } from "./watcher-reducer"
 
 export function loadWatchers() {
     return async (dispatch) => {
@@ -8,16 +8,6 @@ export function loadWatchers() {
             dispatch({ type: SET_WATCHERS, watchers })
         } catch (err) {
             console.log('err:', err)
-        }
-    }
-}
-
-export function selectWatcher(watcher) {
-    return async (dispatch) => {
-        try {
-            dispatch({ type: SET_SELECTED_WATCHER, watcher })
-        } catch (err) {
-            console.log('Cannet select watcher:', err)
         }
     }
 }
