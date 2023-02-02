@@ -1,10 +1,9 @@
 
 const initalState = {
-    loggedInUser: {
-        name: 'Jorji',
-        balance: 300
-    }
+    watchers: [],
+    selectedWatcher: null
 }
+
 
 export function watcherReducer(state = initalState, action) {
 
@@ -17,7 +16,7 @@ export function watcherReducer(state = initalState, action) {
         //     }
 
         default:
-            return state;
+            return state
     }
 
 }

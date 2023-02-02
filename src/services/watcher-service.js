@@ -1,0 +1,62 @@
+
+import { storageService } from './async-storage.service.js'
+import { utilService } from './util-service.js'
+
+const WATCHER_KEY = 'watcherDB'
+
+_createWatchers()
+
+export const watcherService = {
+    query,
+    get,
+    remove,
+    save,
+    getEmptyWatcher
+}
+async function query() {
+    return await storageService.query(WATCHER_KEY)
+}
+
+async function get(watcherId) {
+    return await storageService.get(WATCHER_KEY, watcherId)
+
+}
+
+async function remove(watcherId) {
+    return await storageService.remove(WATCHER_KEY, watcherId)
+}
+
+async function save(watcher) {
+    if (watcher._id) {
+        return await storageService.put(WATCHER_KEY, watcher)
+    } else {
+        return await storageService.post(WATCHER_KEY, watcher)
+    }
+}
+
+function getEmptyWatcher() {
+    return {
+        fullName: '',
+        movies: [],
+    }
+}
+function _createWatchers() {
+    let watchers = utilService.loadFromStorage(WATCHER_KEY)
+    if (!watchers) {
+        watchers = [
+            _createWatcher('Liad Ja'),
+            _createWatcher('Or Pa'),
+            _createWatcher('Dror La'),
+            _createWatcher('Oren Sa'),
+        ]
+        utilService.saveToStorage(WATCHER_KEY, watchers)
+    }
+}
+
+function _createWatcher(fullName = 'Puki Ba') {
+    return {
+        id: utilService.makeId(),
+        fullName,
+        movies: ['Rambo', 'Rocky']
+    }
+}
