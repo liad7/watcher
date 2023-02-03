@@ -2,7 +2,7 @@ import { Component } from "react"
 import { connect } from "react-redux"
 import { WatcherList } from "../cmps/watcher-list"
 import { watcherService } from "../services/watcher-service"
-import { loadWatchers, removeWatcher, saveWatcher, selectWatcher } from "../store/watcher/watcher-action"
+import { loadWatchers, removeWatcher, saveWatcher } from "../store/watcher/watcher-action"
 
 class _WatcherIndex extends Component {
 
@@ -36,10 +36,10 @@ class _WatcherIndex extends Component {
         const { watchers } = this.props
 
         return (
-            <section className="watcher-index">
-                <h2>Watcher app</h2>
-                <button onClick={this.onAddWatcher}>Add watcher</button>
+            <section className="watcher-index full">
+                <h1>Who's watching Metflix</h1>
                 <WatcherList watchers={watchers} onRemoveWatcher={this.onRemoveWatcher} />
+                <button onClick={this.onAddWatcher}>Add watcher</button>
             </section>
         )
     }
