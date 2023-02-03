@@ -8,9 +8,8 @@
 .main-layout {
     display: grid;
     grid-template-columns: minmax(40px, 7%) 1fr minmax(40px, 7%);
-
     // grid-template-columns: minmax(40px,10%) 1fr minmax(40px,10%);
-    grid-template-columns: 10% 1fr 10%;
+    // grid-template-columns: 10% 1fr 10%;
     >* {
         grid-column: 2;
 

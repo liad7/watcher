@@ -1,6 +1,7 @@
 .home {
     // height: calc(100% - 44px);
-position: relative;
+    position: relative;
+
     img {
         background-size: cover;
         filter: brightness(0.7);
@@ -9,11 +10,40 @@ position: relative;
     .home-content {
         position: absolute;
         z-index: 1;
-    }
-
-    button{
-        background-color: $clr1;
         color: #fff;
-        
+        padding-top: 5%;
+        width: 100%;
+        text-align: center;
+
+        >* {
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: 3.125rem;
+        }
+
+        h2 {
+            font-size: 1.625rem;
+            margin: 16px 6px;
+        }
+
+        h3 {
+            font-size: 23px;
+            padding: 0 10%;
+        }
+
+        button {
+            background-color: $clr1;
+            width: fit-content;
+
+            &.sign-in-btn {
+                margin-bottom: 50px;
+            }
+
+            &.start-btn {
+                margin: 20px auto 0;
+            }
+        }
     }
 }
