@@ -6,15 +6,17 @@
 
 // BASICS
 @import 'basics/base';
-// @import 'basics/layout';
+@import 'basics/layout';
 
 // CMPS 
 @import 'cmps/animal-list';
 @import 'cmps/season-clock';
 @import 'cmps/count-down';
 @import 'cmps/mouse-monitor';
+@import 'cmps/app-header';
 
 //VIEWS
 @import 'views/watcher-index';
+@import 'views/home';
 
 

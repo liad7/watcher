@@ -11,9 +11,9 @@ import { WatcherIndex } from './views/watcher-index'
 function App() {
   return (
     <Router>
-      <div className="app">
+      <div className="app main-layout">
         <AppHeader />
-        <main>
+        <main className="full">
           <Switch>
             <Route path="/animal" component={AnimalList} />
             <Route path="/clock" component={SeasonClock} />
