@@ -13,7 +13,7 @@ function App() {
     <Router>
       <div className="app main-layout">
         <AppHeader />
-        <main className="full">
+        <main className="full main-layout">
           <Switch>
             <Route path="/animal" component={AnimalList} />
             <Route path="/clock" component={SeasonClock} />

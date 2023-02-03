@@ -1,7 +1,19 @@
 .home {
+    // height: calc(100% - 44px);
+position: relative;
     img {
         background-size: cover;
-        object-fit: cover;
         filter: brightness(0.7);
+    }
+
+    .home-content {
+        position: absolute;
+        z-index: 1;
+    }
+
+    button{
+        background-color: $clr1;
+        color: #fff;
+        
     }
 }

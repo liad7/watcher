@@ -1,10 +1,27 @@
-.app-header{
+.app-header {
     height: 44px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: rgb(41, 39, 39);
 
-    .logo{
-        color: $clr1;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            color: $clr1;
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+
+        nav {
+            a {
+                margin-inline-start: 15px;
+                color: #fff;
+
+                &.active {
+                    color: $clr1;
+                }
+            }
+        }
     }
 }
