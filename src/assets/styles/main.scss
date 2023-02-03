@@ -1,3 +1,13 @@
+// SETUP
+// @import 'setup/typography';
+// @import 'setup/functions';
+// @import 'setup/mixins';
+@import 'setup/variables';
+
+// BASICS
+@import 'basics/base';
+// @import 'basics/layout';
+
 // CMPS 
 @import 'cmps/animal-list';
 @import 'cmps/season-clock';

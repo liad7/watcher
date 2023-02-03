@@ -1,9 +1,10 @@
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
-import './App.css'
 import { AnimalList } from './cmps/aminal-list'
+import { AppHeader } from './cmps/app-header'
 import { CountDown } from './cmps/count-down'
 import { MouseMonitor } from './cmps/mouse-monitor'
 import { SeasonClock } from './cmps/season-clock'
+import { Home } from './views/home'
 import { WatcherDetails } from './views/watcher-details'
 import { WatcherIndex } from './views/watcher-index'
 
@@ -11,7 +12,7 @@ function App() {
   return (
     <Router>
       <div className="app">
-
+        <AppHeader />
         <main>
           <Switch>
             <Route path="/animal" component={AnimalList} />
@@ -21,6 +22,7 @@ function App() {
             <Route path="/mouse" component={MouseMonitor} />
             <Route path="/watcher/:id" component={WatcherDetails} />
             <Route path="/watcher" component={WatcherIndex} />
+            <Route path="/" component={Home} />
           </Switch>
         </main>
       </div>
