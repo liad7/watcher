@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/watcher/static/css/main.06f12d82.css",
-    "main.js": "/watcher/static/js/main.ef6add4b.js",
+    "main.css": "/watcher/static/css/main.0543fe1a.css",
+    "main.js": "/watcher/static/js/main.a85aa917.js",
     "static/media/seasons.png": "/watcher/static/media/seasons.2aac9d612742ec54c062.png",
     "static/media/Spring.png": "/watcher/static/media/Spring.257cd860f0e15cb6c9c8.png",
     "static/media/Winter.png": "/watcher/static/media/Winter.41e01f574ef307bc3e16.png",
     "static/media/Autumn.png": "/watcher/static/media/Autumn.a06ab7f4d3c792887ecc.png",
     "index.html": "/watcher/index.html",
-    "main.06f12d82.css.map": "/watcher/static/css/main.06f12d82.css.map",
-    "main.ef6add4b.js.map": "/watcher/static/js/main.ef6add4b.js.map"
+    "main.0543fe1a.css.map": "/watcher/static/css/main.0543fe1a.css.map",
+    "main.a85aa917.js.map": "/watcher/static/js/main.a85aa917.js.map"
   },
   "entrypoints": [
-    "static/css/main.06f12d82.css",
-    "static/js/main.ef6add4b.js"
+    "static/css/main.0543fe1a.css",
+    "static/js/main.a85aa917.js"
   ]
 }
