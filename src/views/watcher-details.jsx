@@ -2,6 +2,7 @@ import { Component } from "react"
 import { connect } from "react-redux"
 import { Link } from "react-router-dom"
 import { HeroMovie } from "../cmps/hero-movie"
+import { MovieList } from "../cmps/movie-list"
 import { WatcherDetailsHeader } from "../cmps/watcher-details-header"
 import { watcherService } from "../services/watcher-service"
 
@@ -26,13 +27,11 @@ class _WatcherDetails extends Component {
         return (
             <section className="watcher-details full">
                 <WatcherDetailsHeader watcher={watcher} />
-                {!!watcher.movies.length ?
+                {!!watcher.movies.length &&
                     <>
                         <HeroMovie movie={watcher.movies[0]} />
-                        <ul>{watcher.movies.map(movie => <li key={movie._id}>{movie.title}</li>)}</ul>
+                        <MovieList movies={watcher.movies} />
                     </>
-                    :
-                    <p>No movies to display</p>
                 }
                 <hr />
                 <Link to="/watcher">Back</Link>
