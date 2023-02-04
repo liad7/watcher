@@ -28,9 +28,6 @@ export function watcherReducer(state = initalState, action) {
             watchers = state.watchers.map(currWatcher => currWatcher._id === watcher._id ? watcher : currWatcher)
             return { ...state, watchers }
         }
-        case SET_SELECTED_MOVIE: {
-            return { ...state, selectedMovie: action.movie }
-        }
         default:
             return state
     }

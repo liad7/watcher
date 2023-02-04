@@ -34,9 +34,3 @@ export function removeWatcher(watcherId) {
         }
     }
 }
-
-export function selectMovie(movie) {
-    return (dispatch) => {
-        dispatch({ type: SET_SELECTED_MOVIE, movie })
-    }
-}
