@@ -1,6 +1,7 @@
 import { Component } from "react"
 import { connect } from "react-redux"
 import { Link } from "react-router-dom"
+import { WatcherDetailsHeader } from "../cmps/watcher-details-header"
 import { watcherService } from "../services/watcher-service"
 
 class _WatcherDetails extends Component {
@@ -23,6 +24,7 @@ class _WatcherDetails extends Component {
         if (!watcher) return <section>Loading...</section>
         return (
             <section className="watcher-details">
+                <WatcherDetailsHeader watcher={watcher} />
                 <h3>{watcher.fullName}</h3>
                 <h5>Movies</h5>
                 {!!watcher.movies.length ?
