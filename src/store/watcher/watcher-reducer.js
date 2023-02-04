@@ -2,9 +2,11 @@ export const SET_WATCHERS = 'SET_WATCHERS'
 export const ADD_WATCHER = 'ADD_WATCHER'
 export const UPDATE_WATCHER = 'UPDATE_WATCHER'
 export const REMOVE_WATCHER = 'REMOVE_WATCHER'
+export const SET_SELECTED_MOVIE = 'SET_SELECTED_MOVIE'
 
 const initalState = {
     watchers: [],
+    selectedMovie: null
 }
 
 
@@ -26,7 +28,9 @@ export function watcherReducer(state = initalState, action) {
             watchers = state.watchers.map(currWatcher => currWatcher._id === watcher._id ? watcher : currWatcher)
             return { ...state, watchers }
         }
-
+        case SET_SELECTED_MOVIE: {
+            return { ...state, selectedMovie: action.movie }
+        }
         default:
             return state
     }

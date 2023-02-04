@@ -37,17 +37,18 @@
         background-position: 50%;
         background-size: cover;
         color: $clr2;
-        position: relative;
+        display: flex;
+        align-items: flex-end;
 
         .hero-content {
-            position: absolute;
-            bottom: 75px;
-            max-width: 300px;
+            height: fit-content;
+            width: min-content;
 
             h2 {
                 font-size: 3em;
                 font-weight: 500;
                 margin-bottom: 20px;
+                padding-inline-end: 100px;
             }
 
             p {
@@ -55,6 +56,8 @@
             }
 
             .btns-container {
+                margin-bottom: 25px;
+
                 >* {
                     display: inline-flex;
                     align-items: center;
@@ -90,15 +93,19 @@
         overflow-x: auto;
         height: 130px;
 
-        .movie-preview {
-            cursor: pointer;
-            border-radius: 2px;
+        a {
             height: 100%;
             aspect-ratio: 1/0.56;
-            background-size: cover;
 
-            &:hover {
-                transform: scale(1.01);
+            .movie-preview {
+                cursor: pointer;
+                border-radius: 2px;
+                height: 100%;
+                background-size: cover;
+
+                &:hover {
+                    transform: scale(1.01);
+                }
             }
         }
     }

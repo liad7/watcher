@@ -1,5 +1,5 @@
 import { watcherService } from "../../services/watcher-service"
-import { ADD_WATCHER, REMOVE_WATCHER, SET_WATCHERS, UPDATE_WATCHER } from "./watcher-reducer"
+import { ADD_WATCHER, REMOVE_WATCHER, SET_SELECTED_MOVIE, SET_WATCHERS, UPDATE_WATCHER } from "./watcher-reducer"
 
 export function loadWatchers() {
     return async (dispatch) => {
@@ -32,5 +32,11 @@ export function removeWatcher(watcherId) {
         } catch (err) {
             console.log(`Cannot remove watcher id:${watcherId}:`, err)
         }
+    }
+}
+
+export function selectMovie(movie) {
+    return (dispatch) => {
+        dispatch({ type: SET_SELECTED_MOVIE, movie })
     }
 }

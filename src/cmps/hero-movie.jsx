@@ -1,7 +1,6 @@
 
 export function HeroMovie({ movie }) {
-    console.log('movie:', movie)
-
+    
     return (
         <section className="hero-movie" style={{ backgroundImage: `url(${movie.img})` }}>
             <section className="hero-content">

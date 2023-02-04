@@ -1,7 +1,13 @@
-export function MoviePreview({ movie }) {
-    
+import { Link } from "react-router-dom"
+
+export function MoviePreview({ movie, onSelectMovie }) {
+
     return (
-        <article className="movie-preview" style={{ backgroundImage: `url(${movie.img})` }}>
-        </article>
+        <Link to={`${movie._id}`}>
+            <article className="movie-preview"
+                onClick={() => onSelectMovie(movie)}
+                style={{ backgroundImage: `url(${movie.img})` }}>
+            </article>
+        </Link>
     )
 }
