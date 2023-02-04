@@ -1,4 +1,8 @@
 .watcher-details {
+    >* {
+        padding: 0 5%;
+
+    }
 
     &-header {
         background-color: rgb(20 20 20);
@@ -6,7 +10,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 5%;
 
         nav {
             a {
@@ -29,28 +32,45 @@
     }
 
     .hero-movie {
-        .movie-img {
-            aspect-ratio: 1/0.4;
-            background-position: 50%;
-            background-size: cover;
-        }
+        aspect-ratio: 1/0.4;
+        background-position: 50%;
+        background-size: cover;
+        color: $clr2;
+        position: relative;
 
-        .btns-container {
-            >* {
-                display: inline-flex;
-                align-items: center;
-                gap: 10px;
-                padding: 5px 15px;
-                margin-inline-start: 15px;
+        .hero-content {
+            position: absolute;
+            bottom: 75px;
+            max-width: 300px;
+
+            h2 {
+                font-size: 3em;
+                font-weight: 500;
+                margin-bottom: 20px;
             }
 
-            .play-btn {
-                color: $clr4;
-                background-color: $clr2;
+            p {
+                margin-bottom: 15px;
             }
 
-            .info-btn{
-                background-color: #6d6d6eb3;
+            .btns-container {
+                >* {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 5px 15px;
+                    margin-inline-start: 15px;
+                    font-weight: 400;
+                }
+
+                .play-btn {
+                    color: $clr4;
+                    background-color: $clr2;
+                }
+
+                .info-btn {
+                    background-color: #6d6d6eb3;
+                }
             }
         }
     }
