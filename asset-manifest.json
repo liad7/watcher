@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/watcher/static/css/main.001b0ca0.css",
-    "main.js": "/watcher/static/js/main.1087399c.js",
+    "main.css": "/watcher/static/css/main.dad29bac.css",
+    "main.js": "/watcher/static/js/main.affea0bf.js",
     "static/media/seasons.png": "/watcher/static/media/seasons.2aac9d612742ec54c062.png",
     "static/media/Spring.png": "/watcher/static/media/Spring.257cd860f0e15cb6c9c8.png",
     "static/media/Winter.png": "/watcher/static/media/Winter.41e01f574ef307bc3e16.png",
     "static/media/Autumn.png": "/watcher/static/media/Autumn.a06ab7f4d3c792887ecc.png",
     "index.html": "/watcher/index.html",
-    "main.001b0ca0.css.map": "/watcher/static/css/main.001b0ca0.css.map",
-    "main.1087399c.js.map": "/watcher/static/js/main.1087399c.js.map"
+    "main.dad29bac.css.map": "/watcher/static/css/main.dad29bac.css.map",
+    "main.affea0bf.js.map": "/watcher/static/js/main.affea0bf.js.map"
   },
   "entrypoints": [
-    "static/css/main.001b0ca0.css",
-    "static/js/main.1087399c.js"
+    "static/css/main.dad29bac.css",
+    "static/js/main.affea0bf.js"
   ]
 }
