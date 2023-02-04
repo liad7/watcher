@@ -33,7 +33,6 @@ class _WatcherDetails extends Component {
                         <MovieList movies={watcher.movies} />
                     </>
                 }
-                <hr />
                 <Link to="/watcher">Back</Link>
             </section>
         )
