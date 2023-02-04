@@ -59,8 +59,8 @@ async function _getMovies() {
 function _cleanMoviesData(movies) {
     return movies.map(movie => {
         return {
-            _id: utilService.makeId(),
-            img: `https://api.themoviedb.org${movie.backdrop_path}`,
+            _id: movie.id,
+            img: `https://image.tmdb.org/t/p/original//${movie.backdrop_path}`,
             title: movie.title,
             publishedAt: movie.release_date,
             popularity: movie.popularity,

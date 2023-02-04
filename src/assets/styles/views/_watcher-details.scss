@@ -1,0 +1,38 @@
+.watcher-details {
+
+    &-header {
+        background-color: rgb(20 20 20);
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5%;
+
+        nav {
+            a {
+                color: $clr2;
+                margin-inline-end: 10px;
+
+                &.active {
+                    color: $clr1;
+                }
+            }
+        }
+
+        .watcher-img {
+            height: 85%;
+
+            img {
+                border-radius: 3px;
+            }
+        }
+    }
+
+    .hero-movie {
+        .movie-img {
+            aspect-ratio: 1/0.4;
+            background-position: 50%;
+            background-size: cover;
+        }
+    }
+}
