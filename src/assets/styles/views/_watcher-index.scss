@@ -10,9 +10,8 @@
     }
 
     .watcher-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
         padding: 0 10%;
 
         .watcher-preview {
@@ -20,8 +19,6 @@
             margin: 0 10px;
 
             img {
-                height: 84px;
-                width: 84px;
                 border-radius: 4px;
                 cursor: pointer;
 
