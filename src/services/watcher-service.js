@@ -5,6 +5,10 @@ import { utilService } from './util-service.js'
 const WATCHER_KEY = 'watcherDB'
 const API_KEY = '281dd39c6a06db04bf7424826d6146f0'
 
+const YT_KEY = 'AIzaSyBs5mgdleHB6slJBwBsrulVLy9Myo3bi8M'
+const SEARCH_API = `https://www.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable=true&type=video&key=${YT_KEY}&q=`
+const videoUrl = 'https://www.youtube.com/embed/'
+
 _createWatchers()
 
 export const watcherService = {
@@ -13,6 +17,7 @@ export const watcherService = {
     remove,
     save,
     getEmptyWatcher,
+    getMovieTrailer,
 }
 async function query() {
     return await storageService.query(WATCHER_KEY)
@@ -40,6 +45,11 @@ function getEmptyWatcher(fullName = '') {
         fullName,
         movies: [],
     }
+}
+
+async function getMovieTrailer(movieTitle) {
+    const res = await axios.get(SEARCH_API + movieTitle)
+    return videoUrl + res.data.items[0].id.videoId
 }
 
 async function _getMovies() {
