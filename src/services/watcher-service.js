@@ -1,12 +1,34 @@
+import axios from 'axios'
 import { storageService } from './async-storage.service.js'
 import { utilService } from './util-service.js'
 
 const WATCHER_KEY = 'watcherDB'
 const API_KEY = '281dd39c6a06db04bf7424826d6146f0'
 
+getMovies()
+async function getMovies() {
+    try {
+        const res = await axios.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`)
+        const { genres } = res.data
+        const movieRes = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${genres[0].id}`)
+        const { results } = movieRes.data
+        const movies = _cleanMoviesData(results)
+        console.log('movies:', movies);
+    } catch (err) {
+        console.log('Cannot get watcher\'s movies:', err)
+        throw err
+    }
+}
 
-function getMovies() {
-    getAns(renderGenres, `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`)
+function _cleanMoviesData(movies) {
+    return movies.map(movie => {
+        return {
+            img: `https://api.themoviedb.org${movie.backdrop_path}`,
+            title: movie.title,
+            publishedAt: movie.release_date,
+            popularity: movie.popularity,
+        }
+    })
 }
 
 _createWatchers()
@@ -16,7 +38,8 @@ export const watcherService = {
     get,
     remove,
     save,
-    getEmptyWatcher
+    getEmptyWatcher,
+    getMovies,
 }
 async function query() {
     return await storageService.query(WATCHER_KEY)
