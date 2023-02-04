@@ -10,7 +10,6 @@ class _WatcherDetails extends Component {
     }
 
     componentDidMount() {
-        console.log('this.props:', this.props)
         this.loadWatcher()
     }
 
@@ -27,7 +26,7 @@ class _WatcherDetails extends Component {
                 <h3>{watcher.fullName}</h3>
                 <h5>Movies</h5>
                 {!!watcher.movies.length ?
-                    <ul>{watcher.movies.map((movie, idx) => <li key={idx}>{movie}</li>)}</ul>
+                    <ul>{watcher.movies.map(movie => <li key={movie._id}>{movie.title}</li>)}</ul>
                     :
                     <p>No movies to display</p>
                 }
