@@ -62,6 +62,7 @@ function _cleanMoviesData(movies) {
             _id: movie.id,
             img: `https://image.tmdb.org/t/p/original//${movie.backdrop_path}`,
             title: movie.title,
+            desc: movie.overview,
             publishedAt: movie.release_date,
             popularity: movie.popularity,
         }
