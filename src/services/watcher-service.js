@@ -1,8 +1,13 @@
-
 import { storageService } from './async-storage.service.js'
 import { utilService } from './util-service.js'
 
 const WATCHER_KEY = 'watcherDB'
+const API_KEY = '281dd39c6a06db04bf7424826d6146f0'
+
+
+function getMovies() {
+    getAns(renderGenres, `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`)
+}
 
 _createWatchers()
 
