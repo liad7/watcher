@@ -11,19 +11,29 @@
 
     .watcher-list {
         display: grid;
-        grid-template-columns: repeat(5,1fr);
+        grid-template-columns: repeat(5, 1fr);
         padding: 0 10%;
 
         .watcher-preview {
             padding: 10px;
             margin: 0 10px;
+            cursor: pointer;
 
             img {
                 border-radius: 4px;
-                cursor: pointer;
+            }
 
-                &:hover {
+            p {
+                color: grey;
+            }
+
+            &:hover {
+                img {
                     border: 2px solid $clr2;
+                }
+
+                p {
+                    color: $clr2;
                 }
             }
         }
